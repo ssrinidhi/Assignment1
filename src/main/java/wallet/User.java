@@ -1,4 +1,4 @@
-package demo;
+package wallet;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -6,10 +6,7 @@ import java.util.HashMap;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class User implements Serializable {
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private int user_id;
 	private String email;
@@ -66,6 +63,17 @@ public class User implements Serializable {
 	public String getCreated_at(){
 		return this.created_at;
 	}
+
+	public HashMap<Integer,WebLogin> getWebLogins() {
+		return this.webLogins;
+	}
+	public void setWebLogins(int login_id,WebLogin webLogins) {
+		this.webLogins.put(login_id, webLogins);
+	}
+	public void deleteLoginId(int login_id){
+		this.webLogins.remove(login_id);
+	}
+	
 	public String getUpdated_at(){
 		return this.updated_at;
 	}	
@@ -84,14 +92,5 @@ public class User implements Serializable {
 		this.iDCard.remove(iCard);
 	}
 	
-	public HashMap<Integer,WebLogin> getWebLogins() {
-		return this.webLogins;
-	}
-	public void setWebLogins(int login_id,WebLogin webLogins) {
-		this.webLogins.put(login_id, webLogins);
-	}
-	public void deleteLoginId(int login_id){
-		this.webLogins.remove(login_id);
-	}
 	
 }

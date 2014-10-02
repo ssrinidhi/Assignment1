@@ -1,4 +1,4 @@
-package demo;
+package wallet;
 
 import java.io.Serializable;
 
@@ -6,15 +6,13 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class BankAccount implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	private String ba_id;
 	private String account_name;
 	private String routing_number;
 	private String account_number;
+	
 	
 	public String getBa_id() {
 		return ba_id;

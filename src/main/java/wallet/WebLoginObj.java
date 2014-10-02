@@ -1,24 +1,31 @@
-package demo;
+package wallet;
 
 import java.io.Serializable;
+
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-public class WebLogin implements Serializable {
+public class WebLoginObj implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	private int login_id;
+	private String login_id;
 	private String url;
 	private String login;
 	private String password;
 	
-	public int getLogin_id() {
+	public WebLoginObj(String login_id,String url,String login, String password){
+		this.login_id = login_id;
+		this.url = url;
+		this.login = login;
+		this.password = password;
+	}
+	
+	public String getLogin_id() {
 		return login_id;
 	}
-	public void setLogin_id(int login_id) {
+	public void setLogin_id(String login_id) {
 		this.login_id = login_id;
 	}
 	
@@ -48,7 +55,6 @@ public class WebLogin implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
 	
 
 }

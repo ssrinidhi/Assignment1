@@ -1,8 +1,8 @@
-package demo;
+package wallet;
 
 import java.util.HashMap;
 
-public class WalletManager {
+public class ManageUserMap {
 	
 	HashMap<Integer,User> userMap = new HashMap<Integer,User>();
 	
